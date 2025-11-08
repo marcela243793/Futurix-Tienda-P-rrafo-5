@@ -1,0 +1,35 @@
+:root{
+  --bg:#0a0a0a;
+  --blue:#00f0ff;
+  --white:#ffffff;
+  --soft:#b0e0e6;
+  --radius:12px;
+  --maxw:1200px;
+  font-family:'Orbitron', sans-serif;
+}
+
+body{margin:0; background:var(--bg); color:var(--white); line-height:1.5;}
+.site-header{max-width:var(--maxw); margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:18px 20px; position:sticky; top:0; background:rgba(0,0,0,0.95); z-index:120;}
+.nav{display:flex; gap:16px;}
+.nav a{color:var(--soft); text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600; transition:0.3s;}
+.nav a:hover{background:rgba(0,255,255,0.1);}
+.menu-toggle{display:none;}
+
+.hero{max-width:var(--maxw); margin:40px auto; text-align:center; padding:60px 20px; position:relative;}
+.hero h1{font-size:3rem; color:var(--blue);}
+.hero p{color:var(--soft); font-size:1.2rem; margin-bottom:20px;}
+
+.btn{display:inline-block;padding:12px 26px;border-radius:40px;text-decoration:none;font-weight:700;margin:6px; transition:transform .22s ease, background 0.3s ease;}
+.btn.primary{background:linear-gradient(90deg,var(--blue),#00ffff); color:#0a0a0a;}
+.btn.primary:hover{transform:translateY(-3px);}
+
+.productos, .testimonios, .contact{padding:60px 20px;}
+h2{text-align:center; color:var(--blue); margin-bottom:40px;}
+.productos-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:30px;}
+.producto-card{background:rgba(0,255,255,0.05); padding:20px; border-radius:var(--radius); text-align:center; transition:transform 0.3s, box-shadow 0.3s;}
+.producto-card:hover{transform:translateY(-10px); box-shadow:0 12px 30px rgba(0,255,255,0.3);}
+.producto-card h3{color:var(--blue);}
+.testimonial-card{background:rgba(0,255,255,0.05); padding:20px; border-radius:var(--radius); margin:15px 0; text-align:center;}
+.testimonial-card span{color:var(--soft);}
+.site-footer{padding:20px; text-align:center; color:var(--soft); border-top:1px solid rgba(0,255,255,0.1);}
+@media(max-width:900px){.nav{display:none;}.menu-toggle{display:block;}}
